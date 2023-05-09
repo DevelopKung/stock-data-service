@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 const path = require('path')
 
-let cosr = process.env.NODE_ENV != 'development' ? config.allow_cors_url : 'http://localhost:5002'
+let cosr = process.env.NODE_ENV != 'development' ? config.allow_cors_url : 'http://localhost:3010'
 var corsOptions = {
   origin: [cosr, process.env.ALLOW_CORS_URL_NAME, process.env.CYCLIC_URL],
   optionsSuccessStatus: 200
