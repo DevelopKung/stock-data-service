@@ -1,0 +1,6 @@
+{
+  "msg_success": "สำเร็จ",
+  "msg_error": "ไม่สำเร็จ",
+  "msg_not_found": "ไม่พบข้อมูล",
+  "msg_duplicate": "ข้อมูล{text}ซ้ำ"
+}
