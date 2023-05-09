@@ -17,8 +17,6 @@ app.use(express.json({ limit: '20mb' }))
 const apiRouter = require('./router/index.router');
 app.use('/', apiRouter);
 
-const db = require("./models");
-
 app.get('/', (req, res) => {
   res.status(200).send({ message: 'hello world' })
 })
