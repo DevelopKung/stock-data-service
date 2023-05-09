@@ -3,7 +3,12 @@ const express = require('express')
 const cors = require("cors");
 const app = express();
 const path = require('path')
-const corsOptions = { origin: config.allow_cors_url, optionsSuccessStatus: 200 };
+
+let cosr = process.env.NODE_ENV != 'development' ? config.allow_cors_url : 'http://localhost:5002'
+var corsOptions = {
+  origin: [cosr, process.env.ALLOW_CORS_URL_NAME, process.env.CYCLIC_URL],
+  optionsSuccessStatus: 200
+};
 
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ limit: '20mb', extended: false }))
